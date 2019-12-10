@@ -11,6 +11,10 @@ gem 'jquery-rails'
 
 gem 'haml-rails'
 
+gem 'html2haml'
+
+gem 'devise'
+
 gem 'bootstrap-sass', '~> 3.3.6'
 
 gem 'modernizr-rails'
