@@ -1,7 +1,7 @@
 %nav.navbar-expand-lg.navbar-dark.bg-primary
   .container-fluid
     .navbar-header
-      %a.navbar-brand{href: "#"} Module Selection
+      %a.navbar-brand{href: root_path} Module Selection
     %ul.nav.navbar-nav
       %li
         %a{href: "#"} My Modules
@@ -12,11 +12,11 @@
           %span.caret
         %ul.dropdown-menu{:role => "menu"}
           %li
-            %a{href: "#"} Edit Profile
+            %a{href: edit_user_registration_path} Edit Profile
           %li
-            %a{href: "#"} Log Out
+            = link_to "Logout", destroy_user_session_path, method: :delete
           %li
-            %a{href: "#"} Sign Up
+            %a{href: new_user_registration_path} Sign Up
     %ul.nav.navbar-nav.navbar-right
       %li
         %a{href: new_user_session_path}

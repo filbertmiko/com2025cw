@@ -1,6 +1,7 @@
 
 %h1=t('.title')
 %h2=t('.welcome')
-
+- if user_signed_in?
+  %h2= "Hello #{current_user.name}"
 %footer
   %h2=t('.footer')
