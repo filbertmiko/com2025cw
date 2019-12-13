@@ -14,4 +14,10 @@
       = f.label :remember_me
   .actions
     = f.submit "Log in"
+
+
+  - if flash[:notice]
+    %p.alert= flash[:notice]
+  - if flash[:alert]
+    %p.alert= flash[:alert]
 = render "users/shared/links"

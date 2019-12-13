@@ -13,6 +13,11 @@
     = f.label :email
     %br/
     = f.email_field :email, autofocus: true, autocomplete: "email"
+
+  .field
+    = f.label :course
+    %br/
+    = f.select :course_id_id, Course.pluck(:name)
   .field
     = f.label :password
     - if @minimum_password_length
@@ -26,4 +31,6 @@
     = f.password_field :password_confirmation, autocomplete: "new-password"
   .actions
     = f.submit "Sign up"
+
+
 = render "users/shared/links"

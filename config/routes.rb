@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :course_modules
+  resources :lecturers
+  resources :courses
   devise_for :users
   get 'login/authentication'
   root 'home#home'
