@@ -1,3 +1,3 @@
 class Lecturer < ApplicationRecord
-  has_one :course_modules
+  has_one :course_modules 
 end

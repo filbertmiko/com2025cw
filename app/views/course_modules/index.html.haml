@@ -1,0 +1,18 @@
+%h1="Semester 1 Modules"
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Module Code
+      %th Lecturer
+      %th Credits
+      %th{colspan: "4"}
+  %tbody
+    - @course_modules.each do |cm|
+      %tr
+        %td= cm.name
+        %td= cm.code
+        %td= Lecturer.where(:id => cm.lecturer_id).pluck(:name).first
+        %td= cm.credits
+        %td= link_to 'Add', new_course_module_path
